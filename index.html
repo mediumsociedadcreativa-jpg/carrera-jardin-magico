@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrera de Mariposas</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #c0e5f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            user-select: none;
+            -webkit-user-select: none;
+            overflow: hidden;
+        }
+
+        canvas {
+            display: block;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            border-radius: 12px;
+            cursor: pointer;
+            /* Asegura que sea responsivo manteniendo la proporción 1600x2560 */
+            max-width: 100%;
+            max-height: 100vh;
+            aspect-ratio: 1600 / 2560;
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="gameCanvas" width="1600" height="2560"></canvas>
+
+<script src="script.js"></script>
+
+</body>
+</html>
