@@ -1,4 +1,4 @@
-const CACHE_NAME = 'jardin-magico-v3'; // Incrementamos a v3 para que limpie la caché vieja
+const CACHE_NAME = 'jardin-magico-v4'; // Incrementamos a v4 para que limpie la caché vieja
 const ASSETS = [
   './',
   './index.html',
