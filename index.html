@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Carrera de Mariposas</title>
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#000000"> <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000; /* Fondo negro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            font-family: 'Courier New', Courier, monospace; /* Tipografía tipo terminal */
+            user-select: none;
+            -webkit-user-select: none;
+            overflow: hidden;
+            position: fixed; /* Previene scroll en iOS */
+        }
+
+        canvas {
+            display: block;
+            box-shadow: 0 0 30px rgba(255,255,0,0.2); /* Brillo amarillo sutil */
+            /* Se adapta dinámicamente manteniendo proporción */
+            max-width: 100%;
+            max-height: 100vh;
+            object-fit: contain; 
+        }
+    </style>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js')
+            .then(reg => console.log('SW registrado', reg))
+            .catch(err => console.error('Error SW', err));
+        });
+      }
+    </script>
+</head>
+<body>
+
+<canvas id="gameCanvas" width="1600" height="2560"></canvas>
+
+<script src="script.js"></script>
+
+</body>
+</html>
